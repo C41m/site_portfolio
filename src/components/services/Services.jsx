@@ -55,7 +55,7 @@ const Services = () => {
                 </div>  
             </motion.div>
             <motion.div className="listContainer" variants={variants}>
-                <motion.div className="box" whileHover={{background: "Lightgray", color: "black"}} transition={{duration: 2}}>
+                <motion.div className="box" whileHover={{background: "Lightgray", color: "black"}}>
                     <h2>Branding</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sapiente quo ipsum labore ad! Earum recusandae, voluptate ab quasi at soluta sapiente a dolorem velit? Voluptates impedit vel dolore aperiam.</p>
                     <button>Go!</button>
