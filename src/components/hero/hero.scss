@@ -8,7 +8,7 @@
         max-width: 1366px;
         height: 100%;
         margin: auto;
-    
+   
         .textContainer {
             width: 50%;
             height: 100%;
@@ -16,6 +16,7 @@
             flex-direction: column;
             justify-content: center;
             gap: 40px;
+            z-index: 2;
             
             h2 {
                 font-size: 30px;
@@ -24,10 +25,13 @@
             }
 
             h1 {
-               font-size: 88px; 
+               font-size: 88px;
+               z-index: 1; 
             }
 
             .buttons {
+                z-index: 50; 
+
                 button {
                     padding: 20px;
                     border: 1px solid white;
@@ -35,8 +39,8 @@
                     background-color: transparent;
                     color: white;
                     margin-right: 20px;
-                    cursor: pointer;
                     font-weight: 300;
+                    cursor: pointer;
                 }
             }
 
@@ -63,5 +67,7 @@
         color: #ffffff09;
         width: 50%;
         font-weight: bold;
+        z-index: 0;
+        cursor:default
     }
 }
