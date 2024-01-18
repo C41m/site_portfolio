@@ -1,6 +1,7 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import './contact.scss'
 import { motion, useInView } from 'framer-motion'
+import emailjs from '@emailjs/browser'
 
 const variants = {
   initial: {
@@ -18,6 +19,26 @@ const variants = {
 const Contact = () => {
 
   const ref = useRef()
+  const formRef = useRef()
+  const [error, setError] = useState(false)
+  const [success, setSuccess] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+  
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    emailjs.sendForm('service_j2i47d5', 'template_wlz5kzm', formRef.current, 'iQaKRlBP8aNeC2HC4')
+      .then((result) => {
+        setSuccess(true);
+      })
+      .catch((error) => {
+        setError(true);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  }
 
   const isInView = useInView(ref, { margin: "-100px" })
 
@@ -56,17 +77,25 @@ const Contact = () => {
             ></motion.path>
           </svg>
         </motion.div>
-        
-        <motion.form initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay: 3, duration: 1}}>
-          <input type="text" required placeholder='Nome'/>
-          <input type="email" required placeholder='Email'/>
-          <textarea rows={8} required placeholder='Mensagem'></textarea>
-          <button>Enviar</button>
+        <motion.form 
+          ref={formRef}
+          onSubmit={sendEmail}
+          initial={{opacity:0}}
+          whileInView={{opacity:1}}
+          transition={{delay: 3, duration: 1}}
+        >
+          <input type="text" required placeholder="Nome" name="name"/>
+          <input type="email" required placeholder="Email" name="email"/>
+          <textarea rows={8} required placeholder="Mensagem" name="message"></textarea>
+          <button type="submit" disabled={isLoading}>
+            {isLoading ? "Enviando..." : "Enviar"}
+          </button>
+          {error && <p>❌ Falha ao enviar, tente novamente!</p>}
+          {success && <h1>✅ Mensagem enviada, obrigado pelo contato!</h1>}
         </motion.form>
       </motion.div>
-    </motion.div>        
+    </motion.div>
     )
 }
 
 export default Contact
-
