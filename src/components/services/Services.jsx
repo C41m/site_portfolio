@@ -35,29 +35,32 @@ const Services = () => {
         >    
             <motion.div className="textContainer">
                 <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                    <br /> Veniam corrupti fuga 
+                    O segredo do sucesso é fazer coisas comuns de 
+                    <br /> maneira incomumente bem 
                 </p>
                 <hr />
             </motion.div>
             <motion.div className="titleContainer" variants={variants}>
                 <div className="title">
-                    <img src="/people.webp" alt="" />  
                     <h1>
-                        <motion.b whileHover={{color: "orange"}}>Unique</motion.b> Ideas
+                        <motion.b whileHover={{color: "orange"}}>Ciências </motion.b>de Dados
                     </h1>  
                 </div>  
                 <div className="title">
                     <h1>
-                        <motion.b whileHover={{color: "orange"}}>For your</motion.b> Business
-                    </h1>  
-                    <button>What We Do?</button>
+                        Desenvolvimento<motion.b whileHover={{color: "orange"}}> Web</motion.b> 
+                    </h1>      
                 </div>  
             </motion.div>
+            <motion.div className="subtitleContainer">
+                <h1>
+                    <motion.b whileHover={{color: "orange"}}>Tecnologias</motion.b> 
+                </h1>      
+            </motion.div>  
             <motion.div className="listContainer" variants={variants}>
                 <motion.div className="box" whileHover={{background: "Lightgray", color: "black"}}>
-                    <h2>Branding</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sapiente quo ipsum labore ad! Earum recusandae, voluptate ab quasi at soluta sapiente a dolorem velit? Voluptates impedit vel dolore aperiam.</p>
+                    <h2>Analise de Dados</h2>
+
                     <button>Go!</button>
                 </motion.div>
                 <motion.div className="box" whileHover={{background: "Lightgray", color: "black"}}>

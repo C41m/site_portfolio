@@ -61,24 +61,35 @@
         }
     }
 
+    .subtitleContainer {
+        display: flex;
+        
+        h1 {
+            font-size: 45px;
+        }
+    }
+
     .listContainer {
         flex: 2;
         display: flex;
         max-width: 1366px;
         margin: auto;
+        gap: 50px;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: top;
     
         .box {
             // background: transparent;
             padding: 30px;
-            // margin-left: 10px;
-            // margin-right: 10px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
             text-align: center;
             border-radius: 20px;
-
+            border: solid 0.5px gray;
+            
             button {
                 width: 150px;
                 padding: 10px;

@@ -7,6 +7,7 @@ import Services from "./components/services/Services";
 import Portfolio from "./components/portfolio/Portfolio";
 import Contact from "./components/contact/Contact";
 import Cursor from "./components/cursor/Cursor";
+import Services_1 from "./components/services/Services_1";
 
 const App = () => {
   return <div>
@@ -18,9 +19,13 @@ const App = () => {
     <section id="Servicos">
       <Parallax type="services"/>
     </section>
-    <section>
+    {/* <section>
       <Services />
+    </section> */}
+    <section>
+      <Services_1/>
     </section>
+
     <section id="Portfolio">
       <Parallax type="portfolio"/>
     </section>

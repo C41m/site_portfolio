@@ -1,0 +1,138 @@
+.services {
+    background: linear-gradient(180deg, #0c0c1d, #111132);;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+
+
+
+    .textContainer {
+        flex: 1;
+        align-self: flex-end;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        p {
+            font-weight: 200;
+            font-size: 20px;
+            color: gray;
+            text-align: right;
+        }
+
+        hr {
+            width: 500px;
+            border: none;
+            border-top: 0.5px solid gray;
+        }
+    }
+
+    .titleContainer {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .title {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+
+            img {
+                width: 300px;
+                height: 100px;
+                border-radius: 50px;
+                object-fit: cover;
+            }
+
+            h1 {
+                font-size: 96px;
+                font-weight: 100;
+            }
+
+            button {
+                width: 300px;
+                height: 100px;
+                border-radius: 50px;
+                background-color: orange;
+                border: none;
+                font-size: 30px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .subtitleContainer {
+        display: flex;
+        flex: 3;
+        max-width: 1366px;
+        margin: auto;
+        align-items: top;
+        justify-content:space-between;
+        gap: 500px;
+        flex-direction: row;
+        
+        h1 {
+            font-size: 45px;
+        }
+    
+        .detailContainer {
+
+            .listContainer {
+                display: flex;
+                max-width: 1366px;
+                margin: auto;
+                justify-content: space-between;
+                flex-direction: row;
+                align-items: top;
+            
+                .box {
+                    // background: transparent;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content:space-between;
+                    align-items:center;
+                    text-align: center;
+                    border-radius: 20px;
+                    border: solid 3px lightgrey;
+                    
+                    .boxHeader {
+
+                        display: flex;
+                        flex-direction: column;
+
+                        svg {
+                            font-size: 2em;
+                            color: orange
+                            ;
+                        }
+
+                        h2 {
+                            padding-top: 10px;
+                        }
+                        
+
+                    }
+
+                    button {
+                        width: 150px;
+                        padding: 10px;
+                        background-color: orange;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+    
+                    }
+                }
+            }
+
+            .aboutContainer {
+                
+                h2 {
+                }
+            }
+                
+            
+        }
+    }
+}
