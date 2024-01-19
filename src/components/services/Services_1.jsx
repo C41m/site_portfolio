@@ -74,7 +74,14 @@ const Services_1 = () => {
                                     </p>
                                 </div>
                         </motion.div>
-                            <motion.div className="box" whileHover={{background: "Lightgray", color: "black"}}>
+                        <motion.div 
+                            className="box" 
+                            whileHover={{
+                                background: "Lightgray", 
+                                color: "black",
+                                }}
+                            transition={{duration:1}}
+                            >
                                 <div className="boxHeader">
                                     <FontAwesomeIcon icon={faGraduationCap} />
                                     <h2>Educação</h2>                
@@ -88,7 +95,7 @@ const Services_1 = () => {
                         </motion.div>
                     </motion.div>
                     <div className="aboutContainer">
-                        <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore molestiae dolore nam! Sunt, aliquid perspiciatis! Quas eaque ipsum sequi quibusdam? Aut iste consectetur, culpa praesentium sint dicta rerum reprehenderit magnam?</h2>
+                        <h2>Estudante de graduação em Engenharia de Software e de Data Science na Stack Academy, contador com registro ativo, experiência na área fiscal/contábil e consultoria, MBA em Gestão Financeira e Tributária.</h2>
                     </div>
                 </div>
             </div>

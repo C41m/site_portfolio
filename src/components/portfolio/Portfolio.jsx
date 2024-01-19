@@ -1,31 +1,33 @@
 import "./portfolio.scss"
 import { motion, useScroll, useSpring, useTransform } from "framer-motion"
 import {useRef} from "react"
+import { Python, Html, Css, Js, Sass, Sql, Powerbi } from "../icons/Icons"
 
 const items = [
     {
         id: 1,
-        title: "Análise de Dados",
+        title: "Data Science",
         img: "/data.gif",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi cumque fuga a, ipsum deleniti sint facere omnis distinctio eos possimus hic quos vitae ipsam, repellat consectetur at. Impedit, cumque architecto."
+        desc: "Análise com engenharia de dados e automação de processos empresariais, usando ferramentas como Python (Pandas, dash, NumPy, Plotly, Seaborn, Google GCP, OpenPyxl, Selenium, Playwright, PyAutoGUI, Machine Learning, dentre outras), bancos de dados relacionais ou não (SQL), Excel, PowerBI. Afim de facilitar e automatizar os processos de diversas áreas, acumulando experiência.",
+        icons: <motion.div className="iconContainer"><Python/><Sql/><Powerbi /><Html/><Css/><Sass/><Js/></motion.div>
     },
     {
         id: 2,
         title: "Youtube Downloader",
         img: "https://img.freepik.com/free-vector/server-room-concept-illustration_114360-20647.jpg?w=826&t=st=1705349498~exp=1705350098~hmac=b0d2a020034836ab869554daf4a85059be37e5cf3767facd5e80f820c0a55d37",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi cumque fuga a, ipsum deleniti sint facere omnis distinctio eos possimus hic quos vitae ipsam, repellat consectetur at. Impedit, cumque architecto."
+        desc: "Ferramenta desenvolvida de download e extração de MP3 de vídeos e playlist do Youtube. Para essa ferramenta, fora utilizado Python, HTML, CSS e API."
     },
     {
         id: 3,
-        title: "Engenharia de Dados com Analise",
+        title: "Business intelligence",
         img: "https://img.freepik.com/free-vector/server-room-concept-illustration_114360-20647.jpg?w=826&t=st=1705349498~exp=1705350098~hmac=b0d2a020034836ab869554daf4a85059be37e5cf3767facd5e80f820c0a55d37",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi cumque fuga a, ipsum deleniti sint facere omnis distinctio eos possimus hic quos vitae ipsam, repellat consectetur at. Impedit, cumque architecto."
+        desc: "Dashboards com ferramentas, PowerBI ou Streamlit e Power Query com insights próprios."
     },
     {
         id: 4,
         title: "Site Portfolio",
         img: "https://img.freepik.com/free-vector/server-room-concept-illustration_114360-20647.jpg?w=826&t=st=1705349498~exp=1705350098~hmac=b0d2a020034836ab869554daf4a85059be37e5cf3767facd5e80f820c0a55d37",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi cumque fuga a, ipsum deleniti sint facere omnis distinctio eos possimus hic quos vitae ipsam, repellat consectetur at. Impedit, cumque architecto."
+        desc: "Site para portfólio pessoal e estudos em Javascript, HTML, CSS, SCSS e React."
     }
 ]
 
@@ -50,6 +52,9 @@ const Single = ({item}) => {
                         <h2>{item.title}</h2>
                         <p>{item.desc}</p>
                         <button>Detalhes</button>
+                        {item.icons}
+
+
                     </motion.div>
                 </div>
             </div>

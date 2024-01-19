@@ -71,6 +71,16 @@
                     cursor: pointer;
                     
                 }
+
+                .iconContainer {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 50%;
+                    fill: lightgray;
+                    color: red;
+                    gap: 1em;
+                }
             }
         }
     }
