@@ -1,8 +1,10 @@
 import './services_1.scss'
-import { motion, useInView } from "framer-motion"
+import { color, motion, useInView } from "framer-motion"
 import React, { useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMedal } from '@fortawesome/free-solid-svg-icons';
+import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+
 
 const variants = {
     initial: {
@@ -56,15 +58,15 @@ const Services_1 = () => {
             </motion.div>
             <div className="subtitleContainer">
                 <div className="photoContainer">
-                    <p>Oi</p>
+                    <img src="/people.webp" alt="" />
                 </div>
                 <div className="detailContainer">
                     <motion.div className="listContainer" variants={variants}>
-                            <motion.div className="box" whileHover={{background: "Lightgray", color: "black"}}>
-                                <div className="boxHeader">
-                                    <FontAwesomeIcon className="icon" icon={faMedal}/> 
-                                    <h2>Experiência</h2>                
-                                </div> 
+                        <motion.div className="box" whileHover={{ background: "Lightgray", color: "black" }}>
+                            <motion.div className="boxHeader">
+                                <FontAwesomeIcon className="icon" icon={faMedal} animate={{ color: "white" }} />
+                                <h2>Experiência</h2>                 
+                                </motion.div> 
                                 <div className="boxText">
                                     <p>
                                         6+ anos em Data Science <br />
@@ -74,13 +76,13 @@ const Services_1 = () => {
                         </motion.div>
                             <motion.div className="box" whileHover={{background: "Lightgray", color: "black"}}>
                                 <div className="boxHeader">
-                                    <FontAwesomeIcon className="icon" icon={faMedal}/> 
-                                    <h2>Experiência</h2>                
+                                    <FontAwesomeIcon icon={faGraduationCap} />
+                                    <h2>Educação</h2>                
                                 </div> 
                                 <div className="boxText">
                                     <p>
-                                        6+ anos em Data Science <br />
-                                        Engenharia e Análise de Dados
+                                        Estudante<br />
+                                        Engenharia de Software
                                     </p>
                                 </div>
                         </motion.div>
