@@ -1,7 +1,8 @@
 import "./portfolio.scss"
 import { motion, useScroll, useSpring, useTransform } from "framer-motion"
 import {useRef} from "react"
-import { Python, Html, Css, Js, Sass, Sql, Powerbi } from "../icons/Icons"
+import { Python, Html, Css, Js, Sass, Sql, Powerbi, Api, Excel, ReactIcon } from "../icons/Icons"
+import { Tooltip } from 'react-tooltip'
 
 const items = [
     {
@@ -9,25 +10,31 @@ const items = [
         title: "Data Science",
         img: "/data.gif",
         desc: "Análise com engenharia de dados e automação de processos empresariais, usando ferramentas como Python (Pandas, dash, NumPy, Plotly, Seaborn, Google GCP, OpenPyxl, Selenium, Playwright, PyAutoGUI, Machine Learning, dentre outras), bancos de dados relacionais ou não (SQL), Excel, PowerBI. Afim de facilitar e automatizar os processos de diversas áreas, acumulando experiência.",
-        icons: <motion.div className="iconContainer"><Python/><Sql/><Powerbi /><Html/><Css/><Sass/><Js/></motion.div>
+        icons: <motion.div className="iconContainer"><Python/><Sql/><Powerbi/><Html/><Css/><Sass/><Js/></motion.div>
     },
     {
         id: 2,
         title: "Youtube Downloader",
-        img: "https://img.freepik.com/free-vector/server-room-concept-illustration_114360-20647.jpg?w=826&t=st=1705349498~exp=1705350098~hmac=b0d2a020034836ab869554daf4a85059be37e5cf3767facd5e80f820c0a55d37",
-        desc: "Ferramenta desenvolvida de download e extração de MP3 de vídeos e playlist do Youtube. Para essa ferramenta, fora utilizado Python, HTML, CSS e API."
+        img: "/ytDownloader.gif",
+        desc: "Ferramenta desenvolvida de download e extração de MP3 de vídeos e playlist do Youtube. Para essa ferramenta, fora utilizado Python, HTML, CSS e API.",
+        icons: <motion.div className="iconContainer"><Python/><Html/><Css/><Js/><Api/></motion.div>
+
     },
     {
         id: 3,
-        title: "Business intelligence",
-        img: "https://img.freepik.com/free-vector/server-room-concept-illustration_114360-20647.jpg?w=826&t=st=1705349498~exp=1705350098~hmac=b0d2a020034836ab869554daf4a85059be37e5cf3767facd5e80f820c0a55d37",
-        desc: "Dashboards com ferramentas, PowerBI ou Streamlit e Power Query com insights próprios."
+        title: "Business Intelligence",
+        img: "/dashBi.gif",
+        desc: "Dashboards interativos com ferramentas personalizadas, PowerBI, Tableau, Streamlit, Power Query e Excel com insights próprios.",
+        icons: <motion.div className="iconContainer"><Python/><Sql/><Excel/><Api/><Powerbi/></motion.div>
+
     },
     {
         id: 4,
         title: "Site Portfolio",
-        img: "https://img.freepik.com/free-vector/server-room-concept-illustration_114360-20647.jpg?w=826&t=st=1705349498~exp=1705350098~hmac=b0d2a020034836ab869554daf4a85059be37e5cf3767facd5e80f820c0a55d37",
-        desc: "Site para portfólio pessoal e estudos em Javascript, HTML, CSS, SCSS e React."
+        img: "/portSite.gif",
+        desc: "Site para portfólio pessoal e estudos em Javascript, HTML, CSS, SCSS e React.",
+        icons: <motion.div className="iconContainer"><Html/><Css/><Sass/><Js/><ReactIcon/></motion.div>
+
     }
 ]
 
@@ -52,9 +59,8 @@ const Single = ({item}) => {
                         <h2>{item.title}</h2>
                         <p>{item.desc}</p>
                         <button>Detalhes</button>
-                        {item.icons}
-
-
+                        {item.icons}        
+                        <Tooltip id="tooltip" />
                     </motion.div>
                 </div>
             </div>
