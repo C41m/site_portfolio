@@ -40,14 +40,32 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+            outline: none;
+            
 
             input, textarea {
                 padding: 20px;
                 background-color: transparent;
-                border: 1px solid white;
+                border: 2px solid lightgray;
                 color: white;
-                border-radius: 5px;
+                border-radius: 15px;
+                transition: 0.8s;
+
             }
+
+            input:focus, textarea:focus {
+                outline: none; 
+                border-color: orange; 
+                box-shadow: 0 0 5px orange; 
+                transition: 1s;
+                color: lightgray;
+            }
+
+            input::placeholder, textarea::placeholder {
+                color: darkgrey;
+            }
+
+            
         
             button {
                 padding: 20px;

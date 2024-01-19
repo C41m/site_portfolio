@@ -58,7 +58,9 @@ const Single = ({item}) => {
                     <motion.div className="textContainer" style={{ y }}>
                         <h2>{item.title}</h2>
                         <p>{item.desc}</p>
-                        <button>Detalhes</button>
+                        <button className="btn">
+                            <p>Detalhes</p>
+                        </button>
                         {item.icons}        
                         <Tooltip id="tooltip" />
                     </motion.div>
