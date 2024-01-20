@@ -1,6 +1,7 @@
 import "./navbar.scss"
 import Sidebar from "../sidebar/Sidebar"
 import {motion} from "framer-motion"
+import { Linkedin, Github, Gmail } from "../icons/Icons"
 
 const Navbar = () => {
   return (
@@ -14,10 +15,11 @@ const Navbar = () => {
             transition={{duration:0.5}}>
             <span>Caio Soares</span>
             <div className="social">
-                <a href="#"><img src="/facebook.png" alt="" /></a>
-                <a href="#"><img src="/instagram.png" alt="" /></a>
-                <a href="#"><img src="/youtube.png" alt="" /></a>
-                <a href="#"><img src="/dribbble.png" alt="" /></a>
+                <div className="iconContainer">
+                  <a href="https://www.linkedin.com/in/caiofernandobs/"><Linkedin/></a>
+                  <a href="https://github.com/C41m"><Github/></a>
+                  <Gmail/>
+                </div>
             </div>
         </motion.div>
     </div>

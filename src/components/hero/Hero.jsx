@@ -67,7 +67,7 @@ const Hero = () => {
             >
                 <motion.h2 variants={textVarians}>BEM VINDO!</motion.h2>
                 <motion.h1 variants={textVarians}>Engenheiro e Analista de Dados</motion.h1>
-                <motion.h1 variants={textVarians}>Python Dev</motion.h1>
+                <motion.h1 variants={textVarians}>Desenvolvedor</motion.h1>
                 <motion.div className="buttons" variants={textVarians}>
                     <motion.button variants={textVarians}>
                         <a href="#Servicos">Trabalhos</a>
