@@ -41,14 +41,15 @@
                     border: solid 3px lightgray;
                     padding: 10px;
                     width: 200px;
-                    cursor: pointer;
                     transition: 1s;
+                    cursor: pointer;
                     
-                    p {
+                    a {
                         font-weight: 500;
                         color: lightgray;
                         font-size: 18px;
-
+                        transition: 1s;
+                        text-decoration: none;
                     }
                 }
                 
@@ -64,7 +65,7 @@
 
                 }
 
-                button:hover p{
+                button:hover a{
                     color: orange;
                     scale: 1.02;
                     transition: 1s;
@@ -80,11 +81,39 @@
     }
 
     .imageContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 100%;
+        width: 50%;
+        margin: auto;     
         position: absolute;
         top: 0;
         right: 0;
+        
 
+        canvas {
+            z-index: 1;
+        }
+
+        #rocketHero {
+            animation: rocketHeroAnimate 3s infinite ease alternate;  
+        }
+
+
+        img {
+            margin: auto;
+            width: 700px;
+            z-index: 2;
+            position: absolute; 
+ 
+        }
+
+        @keyframes rocketHeroAnimate {
+            to {
+                transform: translateY(30px);
+            }
+        }
     }
 
     .slidingTextContainer {
