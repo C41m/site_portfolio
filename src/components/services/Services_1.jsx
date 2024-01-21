@@ -1,9 +1,12 @@
 import './services_1.scss'
-import { color, motion, useInView } from "framer-motion"
+import Cube from './Cube';
+import { motion, useInView } from "framer-motion"
 import React, { useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMedal } from '@fortawesome/free-solid-svg-icons';
 import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+import { PerspectiveCamera, OrbitControls } from '@react-three/drei';
+import { Canvas } from '@react-three/fiber';
 
 
 const variants = {
@@ -58,7 +61,14 @@ const Services_1 = () => {
             </motion.div>
             <div className="subtitleContainer">
                 <div className="photoContainer">
-                    <img src="/people.webp" alt="" />
+                    <Canvas>
+                        <OrbitControls enableZoom={false} enablePan={false} autoRotate={1} rotateSpeed={1}/>
+                        <ambientLight intensity={0.1}/>
+                        <directionalLight position={[3,2,1]}/>
+                        <PerspectiveCamera makeDefault position={[6, 6, 1]} />
+                        <Cube />
+
+                    </Canvas>
                 </div>
                 <div className="detailContainer">
                     <motion.div className="listContainer" variants={variants}>

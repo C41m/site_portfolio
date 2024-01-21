@@ -18,7 +18,7 @@ const Navbar = () => {
                 <div className="iconContainer">
                   <a href="https://www.linkedin.com/in/caiofernandobs/"><Linkedin/></a>
                   <a href="https://github.com/C41m"><Github/></a>
-                  <Gmail/>
+                  <a href="mailto:caiofernandobs@gmail.com"><Gmail/></a>
                 </div>
             </div>
         </motion.div>
