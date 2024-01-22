@@ -19,13 +19,9 @@ const App = () => {
     <section id="Servicos">
       <Parallax type="services"/>
     </section>
-    {/* <section>
-      <Services />
-    </section> */}
     <section>
       <Services_1/>
     </section>
-
     <section id="Portfolio">
       <Parallax type="portfolio"/>
     </section>

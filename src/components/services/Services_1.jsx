@@ -38,7 +38,7 @@ const Services_1 = () => {
             variants={variants} 
             initial="initial"
             ref={ref}
-            animate={isInView && "animate"}
+            animate={"animate"}
         >    
             <motion.div className="textContainer">
                 <p>
@@ -63,7 +63,7 @@ const Services_1 = () => {
                 <div className="photoContainer">
                     <Canvas>
                         <OrbitControls enableZoom={false} enablePan={false} autoRotate={1} rotateSpeed={1}/>
-                        <ambientLight intensity={0.1}/>
+                        <ambientLight intensity={0.9}/>
                         <directionalLight position={[3,2,1]}/>
                         <PerspectiveCamera makeDefault position={[6, 6, 1]} />
                         <Cube />
@@ -78,7 +78,7 @@ const Services_1 = () => {
                                 <h2>Experiência</h2>                 
                                 </motion.div> 
                                 <div className="boxText">
-                                    <p>
+                                    <p> 1+ ano Programador Python<br />
                                         6+ anos em Data Science <br />
                                         Engenharia e Análise de Dados
                                     </p>
@@ -98,8 +98,10 @@ const Services_1 = () => {
                                 </div> 
                                 <div className="boxText">
                                     <p>
-                                        Estudante<br />
-                                        Engenharia de Software
+                                        Estudante de<br />
+                                        Engenharia de Software <br />
+                                        Contador
+
                                     </p>
                                 </div>
                         </motion.div>

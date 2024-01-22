@@ -1,25 +1,51 @@
+@import "../../app.scss";
+
 .contact {
     height: 100%;
     max-width: 1366px;
     margin: auto;
     display: flex;
     align-items: center;
+    @include mobile {
+        flex-direction: column;
+    }
 
     .textContainer {
         flex: 1;
         display: flex;
         flex-direction: column;
         gap: 40px;
+        @include mobile {
+            gap: 10px;
+            align-items: center;
+        }
 
         h1 {
             font-size: 100px;
             line-height: 88px;
+
+            @include mobile {
+                padding-top: 40px;
+                font-size: 70px;
+                text-align: center;
+            }
+        }
+
+        h2 {
+            text-align: center;
         }
     }
-
+    
     .formContainer {
         flex: 1;
-        position: relative;
+        position: relative;  
+        @include mobile {
+            width: 100%;
+            padding-top: 15px;
+            padding-bottom: 44px;
+
+        }
+
         
         .phoneSvg {
             position: absolute;
@@ -78,4 +104,5 @@
         
         }
     }
+
 }

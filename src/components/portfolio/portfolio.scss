@@ -1,5 +1,8 @@
+@import "../../app.scss";
+
 .portfolio {
     position: relative;
+
 
     .progress {
         position: sticky;
@@ -11,6 +14,10 @@
         font-size: 36px;
         background-color: #0c0c1d;
         z-index: 998;
+        @include mobile {
+            padding-top: 30px;
+            font-size: 25px;
+        }
 
         .progressBar {
             height: 10px;
@@ -30,31 +37,37 @@
             max-width: 1366px;
             height: 100%;
             margin: auto;
-            display: flex;
+            display: flex; 
             align-items: center;
             justify-content: center;
             align-content: center;
             padding-top: 120px;
-      
-            .imageContainer {
-                flex: 1;
-                height: 60%;
-                
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: contain;
-                }
+            @include mobile {
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 200px;
             }
-
+    
             .textContainer {
+                position: relative;
                 flex: 1;
                 display: flex;
                 flex-direction: column;
                 gap: 30px;
+                @include mobile {
+                    text-align: center;
+                    align-items: center;
+                    gap: 30px;
+
+                }
+        
 
                 h2 {
                     font-size: 72px;
+                    @include mobile {
+                        font-size: 50px;
+                        padding-top: 10px;
+                    }
                 }
 
                 p {
@@ -70,6 +83,7 @@
                     width: 200px;
                     cursor: pointer;
                     transition: 1s;
+
                     
                     p {
                         font-weight: 500;
@@ -128,6 +142,21 @@
                     font-weight: 500;
                 }
             }
+            .imageContainer {
+                height: 60%;
+                padding-right: 50px;
+                @include mobile {
+                    height: 32%;
+                    padding-right: 0px;
+                }
+                
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+
         }
     }
 }
