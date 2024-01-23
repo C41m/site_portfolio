@@ -13,13 +13,14 @@
         margin: auto;
         display: flex;
         flex-direction: row;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
         @include tablet {
-            gap: 4px;
+            gap: 2px;
         }
         @include mobile {
             flex-direction: column;
+            gap: 0px;
         }
 
         .social {
@@ -143,7 +144,7 @@
                     height: 60%;
                 }
                 @include mobile {
-                    height: 50%;
+                    height: 40%;
                 }
             }
             
@@ -164,6 +165,8 @@
             width: 50%;
             font-weight: bold;
             z-index: 0;
-            cursor:default
+            cursor:default;
+
+
         }
     }

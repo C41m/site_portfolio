@@ -9,7 +9,7 @@ const items = [
         id: 1,
         title: "Data Science",
         img: "/data.gif",
-        desc: "Análise com engenharia de dados e automação de processos empresariais, usando ferramentas como Python (Pandas, dash, NumPy, Plotly, Seaborn, Google GCP, OpenPyxl, Selenium, Playwright, PyAutoGUI, Machine Learning, dentre outras), bancos de dados relacionais ou não (SQL), Excel, PowerBI. Afim de facilitar e automatizar os processos de diversas áreas, acumulando experiência.",
+        desc: "Análise com engenharia de dados e automação de processos empresariais, usando ferramentas como de ETL, estatística, marchine learning, dashboards e desenvolvimento.",
         icons: <motion.div className="iconContainer"><Python/><Sql/><Powerbi/><Html/><Css/><Sass/><Js/></motion.div>
     },
     {

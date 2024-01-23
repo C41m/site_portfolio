@@ -30,6 +30,7 @@ const textVarians = {
 const sliderVariants = {
     initial: {
         x: 0, 
+        
     },
     animate: {
         x: "-220%", 
