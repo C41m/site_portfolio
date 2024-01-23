@@ -15,7 +15,7 @@
         z-index: 998;
         @include mobile {
             padding-top: 30px;
-            font-size: 25px;
+            font-size: 20px;
         }
 
         .progressBar {
@@ -58,21 +58,20 @@
                 @include mobile {
                     text-align: center;
                     align-items: center;
-                    gap: 30px;
+                    gap: 15px;
                 }
         
-
                 h2 {
                     font-size: 72px;
                     @include mobile {
                         font-size: 50px;
-                        padding-top: 10px;
                     }
                 }
 
                 p {
                     color: gray;
                     font-size: 20px;
+
                 }
 
                 button {
@@ -124,6 +123,11 @@
                     padding: 20px;
                     gap: 14px;
 
+                    @include mobile {
+                        gap: 1px;
+                        padding: 10px;
+                        max-width: 80%;
+                    }
 
                     svg {
                         fill: lightgray;

@@ -44,20 +44,8 @@ const Contact = () => {
 
   return (
     <motion.div className="contact">
-      <motion.div className="textContainer" ref={ref} variants={variants} initial="initial" whileInView="animate">
+      <motion.div className="titleContainer" ref={ref} variants={variants} initial="initial" whileInView="animate">
         <motion.h1 variants={variants}>Entre em Contato</motion.h1>
-        <motion.div className="item" variants={variants}>
-          <h2>Mail</h2>
-          <span>Teste@teste.com</span>
-        </motion.div>
-        <motion.div className="item" variants={variants}>
-          <h2>Linkedin</h2>
-          <span>https://www.linkedin.com/caiofernandobs</span>
-        </motion.div>
-        <motion.div className="item" variants={variants}>
-          <h2>GitHub</h2>
-          <span>https://www.github.com/c41m</span>
-        </motion.div>
       </motion.div>
       <motion.div className="formContainer">
         <motion.div className="phoneSvg" 
@@ -93,8 +81,22 @@ const Contact = () => {
           {error && <p>❌ Falha ao enviar, tente novamente!</p>}
           {success && <h1>✅ Mensagem enviada, obrigado pelo contato!</h1>}
         </motion.form>
-      </motion.div>
+        <motion.div className="itemContainer" ref={ref} variants={variants} initial="initial" whileInView="animate">
+          <motion.div className="item" variants={variants}>
+            <h2>Mail</h2>
+            <span>caiofernandobs@gmail.com</span>
+          </motion.div>
+          <motion.div className="item" variants={variants}>
+            <h2>Linkedin</h2>
+            <span>https://www.linkedin.com/caiofernandobs</span>
+          </motion.div>
+          <motion.div className="item" variants={variants}>
+            <h2>GitHub</h2>
+            <span>https://www.github.com/c41m</span>
+          </motion.div>
+        </motion.div>
     </motion.div>
+  </motion.div>
     )
 }
 
