@@ -13,15 +13,15 @@ const textVarians = {
         x: 0, 
         opacity: 1,
         transition: {
-            duration: 1,
-            staggerChildren: 0.2,
+            duration: 0.8,
+            staggerChildren: 0.1,
         }
     },
     scrollButton: {
         opacity: 0,
         y: 10,
         transition: {
-            duration: 2,
+            duration: 1,
             repeat: Infinity
         }
     }
@@ -78,11 +78,7 @@ const Hero = () => {
                 </motion.div>
                 <motion.img variants={textVarians} animate="scrollButton" src="/scroll.png" alt=""/>
             </motion.div>
-        </div>
-        <motion.div className="slidingTextContainer" variants={sliderVariants} initial="initial" animate="animate">
-            Caio Fernando Brito Soares
-        </motion.div>
-        <motion.div className="imageContainer" variants={imgVariants} initial="initial" animate="animate">          
+            <motion.div className="imageContainer" variants={imgVariants} initial="initial" animate="animate">          
             <img id="rocketHero" src="./rocketHero.png"/>
             <Canvas camera={{ fov: 25, position: [5, 5, 5]}}>
                 <OrbitControls enableZoom={false} autoRotate />
@@ -93,6 +89,11 @@ const Hero = () => {
                 </Sphere>
             </Canvas>
         </motion.div>
+        </div>
+        <motion.div className="slidingTextContainer" variants={sliderVariants} initial="initial" animate="animate">
+            Caio Fernando Brito Soares
+        </motion.div>
+
     </div>
   )
 }
