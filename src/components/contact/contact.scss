@@ -1,155 +1,154 @@
 @import "../../app.scss";
 
 .contact {
-    height: 100%;
-    max-width: 1366px;
-    margin: auto;
+  height: 100%;
+  max-width: 1366px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 0px 20px;
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  .titleContainer {
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    padding-left: 15px;
-    padding-right: 15px;
+    align-items: start;
+    justify-content: flex-end;
+    height: 30%;
+
     @include mobile {
-        flex-direction: column;
+      height: 18%;
+      justify-content: flex-end;
+
+      align-items: stretch;
     }
 
-    .titleContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        justify-content: flex-end;
-        height: 30%;
-        @include mobile {
-            height: 25%;
-            align-items:stretch;
-        }
+    h1 {
+      font-size: 100px;
+      line-height: 88px;
 
-        h1 {
-            font-size: 100px;
-            line-height: 88px;
-            @include mobile {
-                font-size:45px;
-                text-align: center;
-
-            }
-        }
+      @include mobile {
+        font-size: 45px;
+        text-align: center;
+      }
     }
-    
-    .formContainer {
-        display: flex;
-        flex-direction: row;
-        align-items: baseline;
-        gap: 30px;
-        position: relative;  
+  }
+
+  .formContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 30px;
+    position: relative;
+
+    @include mobile {
+      width: 100%;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .itemContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      gap: 30px;
+      width: 50%;
+
+      @include mobile {
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+        align-self: center;
+        text-align: center;
+        justify-content: baseline;
+      }
+
+      h2 {
+        font-size: 50px;
+
+        @include tablet {
+          font-size: 30px;
+        }
+      }
+
+      span {
+        font-size: 25px;
+        @include tablet {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .phoneSvg {
+      position: absolute;
+      margin: auto;
+      pointer-events: none;
+      padding-left: 100px;
+      @include tablet {
+        padding-left: 0px;
+      }
+
+      svg {
+        stroke: orange;
+        stroke-width: 1;
+        stroke-linecap: "round";
+        fill: none;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      outline: none;
+      width: 50%;
+      @include mobile {
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+        height: 50%;
+      }
+
+      input,
+      textarea {
+        padding: 20px;
+        background-color: transparent;
+        border: 2px solid lightgray;
+        color: white;
+        border-radius: 15px;
+        transition: 0.8s;
+      }
+
+      input:focus,
+      textarea:focus {
+        outline: none;
+        border-color: orange;
+        box-shadow: 0 0 5px orange;
+        transition: 1s;
+        color: lightgray;
+      }
+
+      input::placeholder,
+      textarea::placeholder {
+        color: darkgrey;
+      }
+
+      button {
+        padding: 20px;
+        border: none;
+        background-color: orange;
+        font-weight: 500;
+        border-radius: 10px;
+        cursor: pointer;
         @include mobile {
-            width: 100%;
-            flex-direction: column;
-            gap: 5px;
+          padding: 10px;
         }
-
-        .itemContainer {
-            display: flex;
-            flex-direction: column;
-            justify-content: start;
-            align-items: start;
-            gap: 30px;
-            width: 50%;
-            padding-left: 20px;
-            @include mobile {
-                flex-direction: column;
-                gap: 5px;
-                align-items: center;
-                align-self: center;
-                text-align: center;
-                justify-content: baseline;
-                padding-left: 0px;
-                padding-top: 5px;
-
-
-            }
-
-            
-            h2 {
-                font-size: 50px;
-                @include tablet {
-                    font-size: 30px;
-                }
-            }
-            span {
-                font-size: 25px;
-                @include tablet {
-                    font-size: 18px;
-                }
-
-            }     
-        }
-
-        .phoneSvg {
-            position: absolute;
-            margin: auto;
-            pointer-events: none;
-            padding-left: 100px;
-            @include tablet {
-                padding-left: 0px;
-            }
-
-            svg {
-                stroke: orange;
-                stroke-width: 1;
-                stroke-linecap: "round";
-                fill: none;
-            }
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            outline: none;
-            width: 50%;
-            @include mobile {
-                flex-direction: column;
-                gap: 5px;
-                width: 100%;
-                height: 50%;
-            }
-            
-            input, textarea {
-                padding: 20px;
-                background-color: transparent;
-                border: 2px solid lightgray;
-                color: white;
-                border-radius: 15px;
-                transition: 0.8s;
-            }
-
-            input:focus, textarea:focus {
-                outline: none; 
-                border-color: orange; 
-                box-shadow: 0 0 5px orange; 
-                transition: 1s;
-                color: lightgray;
-            }
-
-            input::placeholder, textarea::placeholder {
-                color: darkgrey;
-            }
-    
-            button {
-                padding: 20px;
-                border: none;
-                background-color: orange;
-                font-weight: 500;
-                border-radius: 10px;
-                cursor: pointer;
-                @include mobile {
-                    padding: 10px;
-                }                
-            }
-        
-        }
-    
-
-}
-
+      }
+    }
+  }
 }
