@@ -2,8 +2,8 @@ import { motion } from "framer-motion"
 
 const toggleButton = ({setOpen}) => {
   return (
-    <button onClick={() => setOpen((prev) => !prev)}>
-      <svg width="23" height="23" viewBox="0 0 23 23">
+    <motion.button onClick={() => setOpen((prev) => !prev)}>
+      <motion.svg width="23" height="23" viewBox="0 0 23 23">
         <motion.path 
           strokeWidth="3" 
           stroke="black" 
@@ -20,8 +20,8 @@ const toggleButton = ({setOpen}) => {
           stroke="black" 
           strokeLinecap="round" 
           variants={{closed: {d: "M 2 16.346 L 20 16.346"}, open: {d: "M 3 2.5 L 17 16.346"}}}/>
-      </svg>
-    </button>
+      </motion.svg>
+    </motion.button>
   )
 }
 

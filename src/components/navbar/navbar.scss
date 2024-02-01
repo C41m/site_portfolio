@@ -1,3 +1,4 @@
+
 .navbar{
     height: 100px;
 
@@ -6,8 +7,10 @@
         margin: auto;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-end;
+        gap: 50px;
         height: 100%;
+        padding-right: 10px;
 
         span{
             font-weight: bold;
@@ -16,6 +19,29 @@
         .social{
             display: flex;
             gap: 20px;
+
+            .iconContainer {
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                width: fit-content;
+                gap: 10px;                
+
+                svg {
+                    fill: lightgray;
+                    width: 30px;
+                    height: 30px;
+                    transition: 1s;
+                    cursor: pointer;
+                }
+
+                svg:hover {
+                    scale: 1.2;
+                    fill: orange;
+                    transition: 1s;
+                    background-color: black;
+                }
+            }
 
         img{
             width: 18px;

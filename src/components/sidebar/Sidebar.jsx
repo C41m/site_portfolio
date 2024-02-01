@@ -2,7 +2,7 @@ import "./sidebar.scss"
 import Links from "./links/Links";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import ToggleButton from "./toggleButton/toggleButton";
+import ToggleButton from "./toggleButton/ToggleButton";
 
 const variants = {
     open: {
