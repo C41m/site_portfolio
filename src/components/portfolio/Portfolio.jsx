@@ -12,15 +12,16 @@ import {
   Api,
   Excel,
   ReactIcon,
+  Nodejs,
 } from "../icons/Icons";
 import { Tooltip } from "react-tooltip";
 
 const items = [
   {
     id: 1,
-    title: "Data Science",
+    title: "Data Science - Marketplace",
     img: "/data.gif",
-    desc: "Análise com engenharia de dados e automação de processos empresariais, usando ferramentas como de ETL, estatística, marchine learning, dashboards e desenvolvimento.",
+    desc: "Engenharia e análise (dinâmica) completa de dados referente à entregas pedidos de uma empresa. Gráficos, tabelas e estatísticas.",
     icons: (
       <motion.div className="iconContainer">
         <Python />
@@ -32,7 +33,8 @@ const items = [
         <Js />
       </motion.div>
     ),
-    url: "https://github.com/C41m/ifood",
+    url: "https://c41m-market.streamlit.app/",
+    git: "https://github.com/C41m/marketplace",
   },
   {
     id: 2,
@@ -49,12 +51,13 @@ const items = [
       </motion.div>
     ),
     url: "https://youtubedownloaderc41m.streamlit.app/",
+    git: "https://github.com/C41m/youtube_downloader",
   },
   {
     id: 3,
     title: "Business Intelligence",
     img: "/dashBi.gif",
-    desc: "Dashboards interativos com ferramentas personalizadas, PowerBI, Tableau, Streamlit, Power Query e Excel com insights próprios.",
+    desc: "Análise de Dados (dinâmica) recebidos via API JSON de um jogo. Gráficos, tabelas e estatísticas.",
     icons: (
       <motion.div className="iconContainer">
         <Python />
@@ -64,7 +67,8 @@ const items = [
         <Powerbi />
       </motion.div>
     ),
-    url: "https://github.com/C41m/Pokemon_Survivors",
+    url: "https://pokemonsurvivors.streamlit.app/",
+    git: "https://github.com/C41m/Pokemon_Survivors",
   },
   {
     id: 4,
@@ -80,7 +84,42 @@ const items = [
         <ReactIcon />
       </motion.div>
     ),
-    url: "https://github.com/C41m/site_portfolio",
+    url: "https://caiofernando-portfolio.netlify.app/",
+    git: "https://github.com/C41m/site_portfolio",
+  },
+  {
+    id: 5,
+    title: "Rede Social",
+    img: "/redeSocial.gif",
+    desc: "Estudos em Node e React para desenvolvimento de uma rede social. Ainda em desenvolvimento...",
+    icons: (
+      <motion.div className="iconContainer">
+        <Html />
+        <Css />
+        <Sass />
+        <Js />
+        <ReactIcon />
+        <Nodejs />
+      </motion.div>
+    ),
+    url: "",
+    git: "https://github.com/C41m/node_social_media",
+  },
+  {
+    id: 6,
+    title: "App de Previsão do Tempo",
+    img: "/tempo.gif",
+    desc: "Estudos em Javascript, CSS e HTML.",
+    icons: (
+      <motion.div className="iconContainer">
+        <Html />
+        <Css />
+        <Js />
+      </motion.div>
+    ),
+    url: "https://caiofernandoweather.netlify.app",
+    git: "https://github.com/C41m/js_WeatherApp",
+
   },
 ];
 
@@ -101,11 +140,20 @@ const Single = ({ item }) => {
           <motion.div className="textContainer" style={{ y }}>
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
-            <a href={item.url}>
-              <button className="btn">
-                <p>Detalhes</p>
-              </button>
-            </a>
+            <div className="buttons">
+              <a href={item.url !== "" ? item.url : "#"}>
+                <button className="btn" disabled={item.url === ""}>
+                  <p>
+                    {item.url !== "" ? "Aplicação" : "Em desenvolvimento..."}
+                  </p>
+                </button>
+              </a>
+              <a href={item.git}>
+                <button className="btn">
+                  <p>Detalhes</p>
+                </button>
+              </a>
+            </div>
 
             {item.icons}
             <Tooltip id="tooltip" />
@@ -132,7 +180,7 @@ const Portfolio = () => {
   return (
     <div className="portfolio" ref={ref}>
       <div className="progress">
-        <h1>Trabalhos</h1>
+        <h1>Projetos e Estudos</h1>
         <motion.div style={{ scaleX }} className="progressBar"></motion.div>
       </div>
       {items.map((item) => (

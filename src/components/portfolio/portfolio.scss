@@ -71,6 +71,25 @@
           padding-top: 230px;
         }
 
+        .buttons {
+          display: flex;
+          gap: 15px;
+
+          @include mobile {
+            flex-direction: column;
+            gap: 10px;
+          }
+
+          .btn {
+            width: 20em;
+
+            @include mobile {
+              width: 25em;
+              height: 5em;
+            }
+          }
+        }
+
         h2 {
           font-size: 72px;
 
@@ -86,7 +105,7 @@
         }
 
         button {
-          background-color: orange;
+          background-color: #ffa500;
           border: solid 3px #0c0c1d;
           border-radius: 15px;
           padding: 10px;
