@@ -77,7 +77,7 @@ const Services_1 = () => {
               <div className="boxText">
                 <p>
                   {" "}
-                  1+ ano Programador Python
+                  5+ anos Programador Python
                   <br />
                   6+ anos em Data Science <br />
                   Engenharia e Análise de Dados

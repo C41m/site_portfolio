@@ -119,7 +119,6 @@ const items = [
     ),
     url: "https://caiofernandoweather.netlify.app",
     git: "https://github.com/C41m/js_WeatherApp",
-
   },
 ];
 
