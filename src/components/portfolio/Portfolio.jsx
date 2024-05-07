@@ -21,7 +21,7 @@ const items = [
     id: 1,
     title: "Data Science - Marketplace",
     img: "/data.gif",
-    desc: "Engenharia e análise (dinâmica) completa de dados referente à entregas pedidos de uma empresa. Gráficos, tabelas e estatísticas.",
+    desc: "Engenharia e análise (dinâmica) completa de dados referente à entregas pedidos de uma empresa. Dashboards, tabelas e estatísticas.",
     icons: (
       <motion.div className="iconContainer">
         <Python />
@@ -153,7 +153,6 @@ const Single = ({ item }) => {
                 </button>
               </a>
             </div>
-
             {item.icons}
             <Tooltip id="tooltip" />
           </motion.div>

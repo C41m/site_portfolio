@@ -74,7 +74,7 @@
         .buttons {
           display: flex;
           gap: 15px;
-          
+
           @include mobile {
             flex-direction: column;
             gap: 10px;
@@ -168,7 +168,6 @@
           color: orange;
           border-radius: 10px;
           border: solid 3px rgb(255, 165, 0);
-          transition: 0.5s;
           font-size: 20px;
           font-weight: 500;
         }
